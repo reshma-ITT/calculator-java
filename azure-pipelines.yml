@@ -15,7 +15,7 @@ steps:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'LocalDirectory'
-    jdkFile: 'C:\jdk-11.0.10.zip'
+    jdkFile: '\jdk.tar.gz'
     cleanDestinationDirectory: false
 - task: Gradle@2
   inputs:
