@@ -43,11 +43,11 @@ steps:
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: false
  - task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    publishJUnitResults: false
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+   inputs:
+     mavenPomFile: 'pom.xml'
+     publishJUnitResults: false
+     javaHomeOption: 'JDKVersion'
+     mavenVersionOption: 'Default'
+     mavenAuthenticateFeed: false
+     effectivePomSkip: false
+     sonarQubeRunAnalysis: false
