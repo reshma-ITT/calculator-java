@@ -17,13 +17,6 @@ steps:
     jdkSourceOption: 'LocalDirectory'
     jdkFile: '../../jdk.tar.gz'
     cleanDestinationDirectory: false
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '8'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'LocalDirectory'
-    jdkFile: 'C:\jdk1.8.0_281.zip'
-    cleanDestinationDirectory: false 
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
