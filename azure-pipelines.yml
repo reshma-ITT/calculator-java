@@ -18,9 +18,12 @@ steps:
     jdkSourceOption: 'LocalDirectory'
     jdkFile: '../../jdk.tar.gz'
     cleanDestinationDirectory: false
-- task: AzureRmWebAppDeployment@4
+- task: Maven@3
   inputs:
-    ConnectionType: 'AzureRM'
-    appType: 'webApp'
-    WebAppName: 
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
