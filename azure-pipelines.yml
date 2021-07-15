@@ -11,13 +11,6 @@ trigger:
 pool: gittest
 
 steps:
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '11'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'LocalDirectory'
-    jdkFile: '../../jdk.tar.gz'
-    cleanDestinationDirectory: false
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
