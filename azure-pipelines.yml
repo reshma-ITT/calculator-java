@@ -1,4 +1,3 @@
-# Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
@@ -18,3 +17,9 @@ steps:
     mavenAuthenticateFeed: true
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+- task: CopyPublishBuildArtifacts@1
+  inputs:
+    CopyRoot: '$(Agent.BuildDirectory)\1\s\target'
+    Contents: 'jar'
+    ArtifactName: 'javaduild'
+    ArtifactType: 'FilePath'
