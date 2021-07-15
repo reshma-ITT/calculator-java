@@ -17,9 +17,12 @@ steps:
     mavenAuthenticateFeed: true
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-- task: CopyPublishBuildArtifacts@1
+- task: CopyFiles@2
   inputs:
-    CopyRoot: '$(Agent.BuildDirectory)\1\s\target'
-    Contents: 'jar file'
-    ArtifactName: 'mvnjarfile'
-    ArtifactType: 'Container'
+    sourceFolder: '$(Build.SourcesDirectory)'
+    contents: '**/$(BuildConfiguration)/**/?(*.exe|*.dll|*.pdb|*.jar)'
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: drop
