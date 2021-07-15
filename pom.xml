@@ -41,6 +41,31 @@
 		</dependency>
 	</dependencies>
 
+	<repositories>
+		<repository>
+			<id>mavanArtificates</id>
+			<url>https://pkgs.dev.azure.com/gittestREPOSAGAR/testing/_packaging/mavanArtificates/maven/v1</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>mavanArtificates</id>
+			<url>https://pkgs.dev.azure.com/gittestREPOSAGAR/testing/_packaging/mavanArtificates/maven/v1</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</distributionManagement>
 	<build>
 		<plugins>
 			<plugin>
