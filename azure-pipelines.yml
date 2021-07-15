@@ -20,6 +20,6 @@ steps:
 - task: CopyPublishBuildArtifacts@1
   inputs:
     CopyRoot: '$(Agent.BuildDirectory)\1\s\target'
-    Contents: 'jar'
-    ArtifactName: 'javaduild'
-    ArtifactType: 'FilePath'
+    Contents: 'jar file'
+    ArtifactName: 'mvnjarfile'
+    ArtifactType: 'Container'
