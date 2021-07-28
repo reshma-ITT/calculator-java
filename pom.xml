@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.coralogix</groupId>
-	<artifactId>calculator</artifactId>
+	<artifactId>calculator_test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>calculator</name>
 	<description>Calculator project for demonstrating CI/CD pipelines</description>
